@@ -27,7 +27,7 @@ pipeline {
         stage('Deploy') { 
             steps {
                 sh './jenkins/scripts/deliver.sh' 
-                input message: 'Sudah selesai menggunakan Java App? (Klik "Proceed" untuk mengakhiri)' 
+                sleep time: 1, unit: 'MINUTES'
                 sh './jenkins/scripts/kill.sh' 
             }
         }
