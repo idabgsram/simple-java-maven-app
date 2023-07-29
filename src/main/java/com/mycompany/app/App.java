@@ -1,5 +1,7 @@
 package com.mycompany.app;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * Hello world!
  */
@@ -11,6 +13,12 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(MESSAGE);
+          try {
+            while (true) {
+                TimeUnit.SECONDS.sleep(1);
+            }
+        } catch(java.lang.InterruptedException e) {
+        }
     }
 
     public String getMessage() {
